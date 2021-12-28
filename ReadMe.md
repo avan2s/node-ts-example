@@ -15,3 +15,9 @@ npm install typescript -g
 npm init
 
 ```
+
+3. Install dev dependencies:
+
+~~~
+npm install -D nodemon typescript tslint @types/node jest ts-jest @types/jest
+~~~
