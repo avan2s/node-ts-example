@@ -116,6 +116,7 @@ The following questions will help Jest to create a suitable configuration for yo
 # add preset to created jest.config.js
 preset: "ts-jest"
 ~~~
+From now on you can test with jest with npm run test, when you have defined tests in files, which are ending with "test.ts" or "spec.ts" or "test.js" or "spec.js": 
 
 
 Sources:
