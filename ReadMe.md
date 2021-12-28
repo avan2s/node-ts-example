@@ -21,3 +21,23 @@ npm init
 ~~~
 npm install -D nodemon typescript tslint @types/node jest ts-jest @types/jest
 ~~~
+
+4. Configure typescript compiler
+~~~
+## create initial typescript compiler config file:
+tsc --init
+
+## set the following properties in the created tsc --init file:
+
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "esModuleInterop": true,
+    "target": "es6",
+    "moduleResolution": "node",
+    "sourceMap": true,
+    "outDir": "dist"
+  },
+  "lib": ["es2015"]
+}
+~~~
