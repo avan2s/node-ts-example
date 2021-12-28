@@ -84,9 +84,9 @@ restApi.listen(port, () => {
 })
 
 # in package.json add the "start" command to the scripts secition and set the main file:
-  "main": "dist/app.js",
+  "main": "dist/src/app.js",
   "scripts": {
-    "start": "tsc && node dist/app.js",
+    "start": "tsc && node dist/src/app.js",
     "lint": "tslint --project .",
     "test": "echo \"Error: no test specified\" && exit 1"
   }
