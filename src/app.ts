@@ -2,6 +2,7 @@ import express, { Request, Response } from 'express';
 import { StaticPool } from 'node-worker-threads-pool';
 import Path from 'path';
 import { performance } from 'perf_hooks';
+import os from 'os';
 
 
 const restApi = express();
@@ -10,8 +11,9 @@ const fibWorkerPath = Path.resolve(__dirname, 'workers', 'fib.worker.js');
 
 console.info(`worker started: ${fibWorkerPath}`);
 
+const numberOfCpuThreads = os.cpus().length;
 const fibPool = new StaticPool({
-    size: 12,
+    size: numberOfCpuThreads - 1,
     task: fibWorkerPath
 });
 
