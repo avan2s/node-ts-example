@@ -18,12 +18,13 @@ npm init
 
 3. Install dev dependencies:
 
-~~~
+```
 npm install -D nodemon typescript tslint @types/node jest ts-jest @types/jest
-~~~
+```
 
 4. Configure typescript compiler
-~~~
+
+```
 ## create initial typescript compiler config file:
 tsc --init
 
@@ -40,4 +41,23 @@ tsc --init
   },
   "lib": ["es2015"]
 }
-~~~
+```
+
+5. Configure tslint
+
+```
+./node_modules/.bin/tslint --init
+
+# allow console logs in typescript code, that it looks like this in tslint.json:
+{
+    "defaultSeverity": "error",
+    "extends": [
+        "tslint:recommended"
+    ],
+    "jsRules": {},
+    "rules": {
+        "no-console": false
+    },
+    "rulesDirectory": []
+}
+```
