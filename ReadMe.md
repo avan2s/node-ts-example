@@ -87,7 +87,7 @@ restApi.listen(port, () => {
   "main": "dist/app.js",
   "scripts": {
     "start": "tsc && node dist/app.js",
-    "lint": "tslint",
+    "lint": "tslint --project .",
     "test": "echo \"Error: no test specified\" && exit 1"
   }
 ```
