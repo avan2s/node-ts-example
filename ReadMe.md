@@ -61,3 +61,34 @@ tsc --init
     "rulesDirectory": []
 }
 ```
+
+6. add an example app:
+
+```
+# Install libraries
+npm install express
+npm install -D @types/express
+
+# add src/app.ts file
+import express, { Request, Response } from 'express';
+
+const restApi = express();
+const port = 3000;
+
+restApi.get('/', (req: Request, response: Response) => {
+    response.send('Hello Rest Api');
+})
+
+restApi.listen(port, () => {
+    console.log(`Rest Api is listening on port ${port}`);
+})
+
+# in package.json add the "start" command to the scripts secition and set the main file:
+  "main": "dist/app.js",
+  "scripts": {
+    "start": "tsc && node dist/app.js",
+    "lint": "tslint",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+```
+With this <i>npm start</i> will tanspile the typescript code to javascript first and then  runs the native javascript code.
