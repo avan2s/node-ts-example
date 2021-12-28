@@ -1,0 +1,11 @@
+{
+  "name": "node-ts-example",
+  "version": "1.0.0",
+  "description": "<h1>node js example project with typescript</h1> This project represents an example node js project written in typescript.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
